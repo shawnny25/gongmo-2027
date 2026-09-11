@@ -1,11 +1,11 @@
-/* Coral & Ink — Do Hyeon 판 */
+/* Coral & Ink — Do Hyeon + Nanum Gothic Coding 판 */
 :root {
   --coral: #ef4623;
   --ink: #2d3b42;
   --peach: #fdf1ee;
   --bg: #fffdfc;
-  --serif: "Do Hyeon", sans-serif;
-  --sans: "Do Hyeon", sans-serif;
+  --serif: "Do Hyeon", sans-serif;            /* 제목 · 숫자 */
+  --sans: "Nanum Gothic Coding", monospace;    /* 본문 · 버튼 · 폼 */
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --r-sm: 24px;
   --r-md: 40px;
@@ -118,7 +118,7 @@ section { padding: 5rem 0; }
 .sim-grid .peach { background: var(--peach); }
 .sim-foot { display: flex; align-items: center; gap: 0.75rem; padding: 0.9rem 1.25rem; background: rgba(255,255,255,0.7); backdrop-filter: blur(8px); border-top: 1px solid #eee; font-size: 0.8rem; font-weight: 700; }
 .sim-foot .ok { color: #16a34a; display: flex; align-items: center; gap: 0.4rem; }
-.tag { margin-left: auto; background: var(--ink); color: #fff; font-family: ui-monospace, monospace; font-size: 0.7rem; padding: 0.2rem 0.55rem; border-radius: 6px; }
+.tag { margin-left: auto; background: var(--ink); color: #fff; font-family: var(--sans); font-size: 0.7rem; padding: 0.2rem 0.55rem; border-radius: 6px; }
 .tag + .tag { margin-left: 0.35rem; }
 
 /* 사업 유형 (벤토) */
