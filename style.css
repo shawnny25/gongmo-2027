@@ -82,6 +82,16 @@ em { color: var(--coral); font-style: italic; }
 @keyframes reveal { from { opacity: 0; } to { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .typing .ch { animation: none; opacity: 1; } }
 
+/* 남은 날짜 오도미터 — 자릿수마다 0~9 기둥을 세우고 translateY 로 굴린다 */
+.countdown { display: inline-flex; align-items: baseline; gap: 0.6rem; margin-bottom: 2.25rem; font-weight: 600; color: color-mix(in srgb, var(--ink) 70%, transparent); }
+.odometer { display: inline-flex; gap: 2px; font-family: var(--serif); font-style: italic; font-size: 4rem; line-height: 1; color: var(--coral); font-variant-numeric: tabular-nums; align-self: center;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent); mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent); }
+.odometer .digit { position: relative; width: 0.55em; height: 1em; overflow: hidden; }
+.odometer .col { position: absolute; inset: 0; display: grid; transition: transform 1.6s var(--ease); will-change: transform; }
+.odometer .col span { height: 1em; display: grid; place-items: center; }
+.cd-unit { font-size: 1.25rem; }
+@media (prefers-reduced-motion: reduce) { .odometer .col { transition: none; } }
+
 /* 섹션 공통 */
 section { padding: 5rem 0; }
 .eyebrow { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: var(--coral); margin-bottom: 1rem; }

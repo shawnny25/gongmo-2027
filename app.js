@@ -30,6 +30,27 @@ document.querySelectorAll(".typing").forEach((el) => {
   wrap(el);
 });
 
+// 남은 날짜 오도미터 (index.html 에서만 동작) — 0 에서 시작해 실제 값까지 굴러간다
+const odo = document.querySelector("#days-left");
+if (odo) {
+  // 달력 날짜 차이 (9/11 → 9/30 = 19일). 마감일 당일은 0
+  const end = new Date(window.CONTENT.deadline + "T00:00:00");
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const days = Math.max(0, Math.round((end - today) / 86400000));
+  const digits = String(days).split("");
+  odo.innerHTML = digits
+    .map(() => `<span class="digit"><span class="col">${[...Array(10).keys()].map((n) => `<span>${n}</span>`).join("")}</span></span>`)
+    .join("");
+  requestAnimationFrame(() =>
+    setTimeout(() => {
+      odo.querySelectorAll(".col").forEach((col, i) => {
+        col.style.transitionDelay = `${i * 120}ms`;
+        col.style.transform = `translateY(-${digits[i]}em)`;
+      });
+    }, 900)
+  );
+}
+
 // 지원서 제출 (apply.html 에서만 동작)
 const form = document.querySelector("#apply-form");
 if (form) {
