@@ -22,11 +22,10 @@
 ### 2. content.js
 `ㅇㅇㅇ` 을 실제 기관명으로, `contact@example.org` 를 문의 메일로 바꿉니다.
 
-### 3. Vercel
-1. https://vercel.com 에서 **Add New → Project**.
-2. 이 폴더를 GitHub 에 올린 뒤 연결하거나, Vercel CLI 로 이 폴더에서 `vercel` 을 실행합니다.
-3. Framework Preset 은 **Other**, 빌드 설정은 비워둡니다.
-4. 배포 주소가 열리면 끝.
+### 3. 배포 (이미 연결됨)
+- GitHub: https://github.com/shawnny25/gongmo-2027
+- Vercel 프로젝트 `gongmo-2027` 이 위 저장소의 `main` 브랜치에 연결돼 있습니다.
+- **`main` 에 push 하면 자동으로 배포됩니다.** 따로 할 일 없음.
 
 ## 로컬에서 미리 보기
 ```bash
