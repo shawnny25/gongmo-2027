@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>지원서 작성 — {{title}}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container">
+    <a class="brand" href="index.html"><span class="mark">G</span><span data-content="orgName">ㅇㅇㅇ</span></a>
+    <a class="btn btn-ghost btn-sm" href="index.html">안내로 돌아가기</a>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="glow tr"></div>
+  <div class="container">
+    <span class="badge fade-up"><span data-content="period">2026년 8월 1일 ~ 9월 30일</span> 접수</span>
+    <h1 class="fade-up" data-delay="1" style="font-size:clamp(2.5rem,7vw,5rem);margin:1rem 0 .75rem">지원서 <em>작성</em></h1>
+    <p class="muted fade-up" data-delay="2" data-content="title">2027 ㅇㅇㅇ 글로벌 파트너십 사업 공모</p>
+  </div>
+</div>
+
+<div class="container">
+  <form class="form-card fade-up" id="apply-form" novalidate="false">
+    <fieldset>
+      <legend>지원자 정보</legend>
+      <div class="grid2">
+        <div class="field"><label for="name">이름</label><input id="name" name="name" required maxlength="50" autocomplete="name" /></div>
+        <div class="field"><label for="org_name">사업 기관명</label><input id="org_name" name="org_name" required maxlength="100" autocomplete="organization" /></div>
+        <div class="field"><label for="phone">연락처</label><input id="phone" name="phone" type="tel" required placeholder="010-1234-5678" autocomplete="tel" /></div>
+        <div class="field"><label for="email">이메일</label><input id="email" name="email" type="email" required placeholder="name@example.org" autocomplete="email" /></div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>사업 정보</legend>
+      <div class="field">
+        <label>사업 유형</label>
+        <div class="tracks">
+          <label class="track"><input type="radio" name="track" value="단년도" required /><div><strong>단년도</strong><small>1년 사업</small></div></label>
+          <label class="track"><input type="radio" name="track" value="다년도" required /><div><strong>다년도</strong><small>3년 사업</small></div></label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="budget">신청 총 예산 <small>숫자만 (원)</small></label>
+        <div class="with-unit"><input id="budget" name="budget" type="number" min="0" step="1" required inputmode="numeric" placeholder="50000000" /><span>원</span></div>
+        <div class="hint" id="budget-hint"></div>
+      </div>
+      <div class="field">
+        <label for="summary">사업 아이템 소개</label>
+        <textarea id="summary" name="summary" required maxlength="3000" placeholder="어디에서, 누구를 위해, 무엇을 하는 사업인지 소개해주세요."></textarea>
+      </div>
+      <div class="field">
+        <label for="plan_url">사업계획서 링크 <small>구글 드라이브 · 노션 등</small></label>
+        <input id="plan_url" name="plan_url" type="url" required pattern="https://.*" placeholder="https://" />
+        <div class="hint">링크 공유가 "링크가 있는 모든 사용자"로 열려 있는지 확인해주세요.</div>
+      </div>
+    </fieldset>
+
+    <div class="form-actions">
+      <button class="btn btn-primary" type="submit">지원서 제출하기</button>
+      <div class="error" role="alert"></div>
+    </div>
+    <p class="privacy muted">입력한 정보는 공모 심사 목적으로만 사용됩니다.</p>
+  </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="content.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
