@@ -1,11 +1,11 @@
-/* Coral & Ink — 한글 조율판 */
+/* Coral & Ink — Do Hyeon 판 */
 :root {
   --coral: #ef4623;
   --ink: #2d3b42;
   --peach: #fdf1ee;
   --bg: #fffdfc;
-  --serif: "Instrument Serif", "Noto Serif KR", serif;
-  --sans: "Manrope", "Noto Sans KR", system-ui, sans-serif;
+  --serif: "Do Hyeon", sans-serif;
+  --sans: "Do Hyeon", sans-serif;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --r-sm: 24px;
   --r-md: 40px;
